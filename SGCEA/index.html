@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quinto Canal de Eventos | Producción Audiovisual Profesional</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <a href="index.html" class="logo">
+            <span class="logo-badge">QC</span>
+            <span>Quinto Canal <small>Producción Audiovisual</small></span>
+        </a>
+        <nav id="nav-menu">
+            <a href="#servicios">Servicios</a>
+            <a href="#paquetes">Paquetes</a>
+            <a href="#proceso">Proceso</a>
+            <a href="#galeria">Producciones</a>
+            <a href="login.php" class="nav-link-login">Iniciar Sesión</a>
+            <a href="registro.php" class="btn-nav">Crear Cuenta</a>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero-pro">
+    <div class="hero-overlay"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+        <span class="hero-kicker">INGENIERÍA EN AUDIO, ILUMINACIÓN Y VIDEO</span>
+        <h1>Transformamos tus eventos en experiencias audiovisuales de alto impacto</h1>
+        <p>Equipamiento certificado, diseño escénico a la medida y operación técnica especializada para conciertos, bodas, congresos y producciones corporativas.</p>
+        <div class="hero-actions">
+            <a href="#paquetes" class="btn-hero-primary">Explorar Paquetes</a>
+            <a href="registro.php" class="btn-hero-secondary">Solicitar Cotización</a>
+        </div>
+        <div class="hero-metrics">
+            <div class="metric-item">
+                <strong>+350</strong>
+                <span>Producciones realizadas</span>
+            </div>
+            <div class="metric-item">
+                <strong>100%</strong>
+                <span>Equipamiento certificado</span>
+            </div>
+            <div class="metric-item">
+                <strong>24/7</strong>
+                <span>Ingeniería en sitio</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICIOS DESTACADOS -->
+<section id="servicios" class="section-block">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-tag">SOLUCIONES INTEGRALES</span>
+            <h2>Servicios Audiovisuales Profesionales</h2>
+            <p>Tecnología de vanguardia y personal altamente capacitado para garantizar precisión acústica y visual en cada montaje.</p>
+        </div>
+
+        <div class="grid-3">
+            <article class="service-card">
+                <div class="service-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=900&q=80" alt="Consola de mezcla y sonido profesional en vivo">
+                    <span class="service-badge">Audio Pro</span>
+                </div>
+                <div class="service-body">
+                    <h3>Montaje de Audio y Line Array</h3>
+                    <p>Sistemas acústicos de alta fidelidad, consolas digitales Yamaha, microfonía inalámbrica Shure e ingenieros de sala para cobertura uniforme.</p>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <div class="service-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=80" alt="Iluminación robótica Beam y escenario de concierto">
+                    <span class="service-badge">Iluminación DMX</span>
+                </div>
+                <div class="service-body">
+                    <h3>Iluminación Robótica y Arquitectónica</h3>
+                    <p>Cabezas móviles Beam, bañadores Par LED RGBW, estructuras truss certificadas, efectos especiales y programación DMX personalizada.</p>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <div class="service-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=80" alt="Pantallas LED gigantes y producción de video en escenario">
+                    <span class="service-badge">Video &amp; LED</span>
+                </div>
+                <div class="service-body">
+                    <h3>Pantallas LED y Circuito Cerrado</h3>
+                    <p>Pantallas LED de alta definición para interiores y exteriores, procesadores de video multicámara y transmisión en vivo HD.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- CATÁLOGO COMPLETO DE PAQUETES DISPONIBLES -->
+<section id="paquetes" class="section-block section-alt">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-tag">CATÁLOGO DE PAQUETES</span>
+            <h2>Paquetes Disponibles para tu Evento</h2>
+            <p>Elige la configuración ideal para tu evento. Al seleccionarla, podrás crear tu cuenta y personalizar tu cotización en línea.</p>
+        </div>
+
+        <div class="filter-bar" id="filtros-index-paquetes">
+            <button type="button" class="filter-chip active" data-cat="Todos">Todos los Paquetes</button>
+            <button type="button" class="filter-chip" data-cat="Audio">Solo Audio</button>
+            <button type="button" class="filter-chip" data-cat="Iluminación">Solo Iluminación</button>
+            <button type="button" class="filter-chip" data-cat="Audio e Iluminación">Combos Audio + Iluminación</button>
+        </div>
+
+        <div id="grid-paquetes-publico" class="paquetes-public-grid">
+            <p style="text-align:center; color:#64748b; grid-column:1/-1;">Cargando paquetes disponibles...</p>
+        </div>
+    </div>
+</section>
+
+<!-- PROCESO DE TRABAJO -->
+<section id="proceso" class="section-block">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-tag">FLUJO DE TRABAJO DIGITAL</span>
+            <h2>Tu evento gestionado de principio a fin</h2>
+            <p>Transparencia total en cotizaciones, disponibilidad de inventario, contratos digitales y seguimiento técnico.</p>
+        </div>
+
+        <div class="process-grid">
+            <div class="process-step">
+                <span class="step-num">01</span>
+                <h3>Cotización Personalizada</h3>
+                <p>Selecciona un paquete base o solicita un requerimiento técnico a medida desde tu portal de cliente.</p>
+            </div>
+            <div class="process-step">
+                <span class="step-num">02</span>
+                <h3>Validación y Contrato</h3>
+                <p>Aprueba tu propuesta, genera tu contrato digital con cláusulas claras y asegura tu fecha con anticipo.</p>
+            </div>
+            <div class="process-step">
+                <span class="step-num">03</span>
+                <h3>Reserva de Inventario</h3>
+                <p>Asignamos equipos certificados y personal técnico exclusivo para la fecha y sede de tu evento.</p>
+            </div>
+            <div class="process-step">
+                <span class="step-num">04</span>
+                <h3>Montaje y Operación</h3>
+                <p>Ejecución puntual en sitio, pruebas de sonido e iluminación y soporte técnico durante todo el evento.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GALERÍA TEMÁTICA DEL PROYECTO -->
+<section id="galeria" class="section-block section-alt">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-tag">EXPERIENCIA EN ESCENA</span>
+            <h2>Equipamiento y Montajes en Acción</h2>
+            <p>Infraestructura técnica lista para producciones de cualquier escala.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item gallery-large">
+                <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=1000&q=80" alt="Escenario iluminado con luces robóticas y producción en vivo">
+                <div class="gallery-caption">
+                    <h4>Producción de Conciertos y Festivales</h4>
+                    <span>Sistemas Line Array + Iluminación Escénica</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=700&q=80" alt="Micrófono profesional en estudio y escenario">
+                <div class="gallery-caption">
+                    <h4>Microfonía y Sonorización</h4>
+                    <span>Claridad vocal en conferencias y galas</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=700&q=80" alt="Efectos de iluminación y ambiente en evento nocturno">
+                <div class="gallery-caption">
+                    <h4>Ambientación y Show de Luces</h4>
+                    <span>Diseño lumínico sincronizado</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA ACCESO / REGISTRO -->
+<section class="cta-banner">
+    <div class="container cta-inner">
+        <div class="cta-text">
+            <h2>Gestiona tus cotizaciones, contratos y eventos en línea</h2>
+            <p>Crea tu cuenta de cliente en segundos o inicia sesión si ya tienes un proyecto registrado con Quinto Canal de Eventos.</p>
+        </div>
+        <div class="cta-buttons">
+            <a href="registro.php" class="btn-cta-light">Crear Cuenta Gratis</a>
+            <a href="login.php" class="btn-cta-outline">Iniciar Sesión</a>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <div>
+            <strong>Quinto Canal de Eventos</strong>
+            <p>Sistema de Gestión de Cotizaciones y Eventos Audiovisuales (SGCEA)</p>
+        </div>
+        <div class="footer-links">
+            <a href="#servicios">Servicios</a>
+            <a href="#paquetes">Paquetes</a>
+            <a href="#proceso">Proceso</a>
+            <a href="login.php">Acceso al Sistema</a>
+            <a href="registro.php">Registro</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Quinto Canal de Eventos. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+    const grid = document.getElementById('grid-paquetes-publico');
+    const chips = document.querySelectorAll('#filtros-index-paquetes .filter-chip');
+
+    const imagenesPorCategoria = {
+        'Audio': 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80',
+        'Iluminación': 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80',
+        'Audio e Iluminación': 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80'
+    };
+
+    const paquetesFallback = [
+        {
+            id_paquete: 1,
+            nombre: 'Paquete Audio Esencial (Hasta 80 personas)',
+            categoria: 'Audio',
+            descripcion: '2 Bocinas amplificadas de 15" en tripié, consola mezcladora de 8 canales, 2 micrófonos inalámbricos Shure, cableado completo y técnico operador en sitio.',
+            servicios_incluidos: 'Audio',
+            costo: '4500.00'
+        },
+        {
+            id_paquete: 2,
+            nombre: 'Paquete Audio Pro Concierto / Conferencia (Hasta 250 personas)',
+            categoria: 'Audio',
+            descripcion: 'Sistema Line Array JBL (4 módulos + 2 subwoofers de 18"), consola digital Yamaha QL5, 4 micrófonos inalámbricos, monitores de piso e ingeniero de audio en sala.',
+            servicios_incluidos: 'Audio',
+            costo: '12500.00'
+        },
+        {
+            id_paquete: 3,
+            nombre: 'Paquete Iluminación Ambiental & Fiesta',
+            categoria: 'Iluminación',
+            descripcion: '8 Par LED RGBW arquitectónicos, 4 cabezas móviles Beam 230W en estructura truss vertical, controlador DMX y máquina de humo.',
+            servicios_incluidos: 'Iluminación',
+            costo: '5200.00'
+        },
+        {
+            id_paquete: 4,
+            nombre: 'Paquete Iluminación Escénica Espectáculo',
+            categoria: 'Iluminación',
+            descripcion: 'Puente truss de 6 metros, 8 cabezas móviles Beam 230W, 12 Par LED RGBW, 2 máquinas de chispas frías, controlador DMX GrandMA2 y operador dedicado.',
+            servicios_incluidos: 'Iluminación',
+            costo: '11800.00'
+        },
+        {
+            id_paquete: 5,
+            nombre: 'Paquete Combo Audio + Iluminación Básico',
+            categoria: 'Audio e Iluminación',
+            descripcion: 'Audio para 100 personas (2 bafles activos + subwoofer 18" + 2 micrófonos inalámbricos) + Iluminación ambiental (6 Par LED RGBW + 2 cabezas móviles Beam + humo) con técnico operador.',
+            servicios_incluidos: 'Audio,Iluminación',
+            costo: '8500.00'
+        },
+        {
+            id_paquete: 6,
+            nombre: 'Paquete Combo Audio + Iluminación Gala / Gran Evento',
+            categoria: 'Audio e Iluminación',
+            descripcion: 'Sistema Line Array completo + consola digital + 4 micrófonos Shure + puente truss con 8 cabezas móviles Beam, 12 Par LED, chispas frías, transporte y 2 técnicos especializados.',
+            servicios_incluidos: 'Audio,Iluminación',
+            costo: '21500.00'
+        }
+    ];
+
+    let sesionActiva = false;
+    try {
+        const sRes = await fetch('estado_sesion.php', { cache: 'no-store' });
+        const sData = await sRes.json();
+        if (sData && sData.autenticado) {
+            sesionActiva = true;
+            const navMenu = document.getElementById('nav-menu');
+            if (navMenu) {
+                const linkLogin = navMenu.querySelector('.nav-link-login');
+                const btnNav = navMenu.querySelector('.btn-nav');
+                if (linkLogin) {
+                    linkLogin.textContent = `Hola, ${sData.nombre}`;
+                    linkLogin.href = 'panel.php';
+                }
+                if (btnNav) {
+                    btnNav.textContent = 'Ir a mi Panel';
+                    btnNav.href = 'panel.php';
+                }
+            }
+            document.querySelectorAll('a[href="registro.php"]').forEach(a => {
+                a.href = 'panel.php';
+                if (a.textContent.includes('Crear Cuenta')) a.textContent = 'Ir a mi Panel';
+            });
+        }
+    } catch (e) {}
+
+    let todosPaquetes = [];
+    try {
+        const res = await fetch('obtener_paquetes.php', { cache: 'no-store' });
+        const data = await res.json();
+        todosPaquetes = (data && data.success && Array.isArray(data.paquetes) && data.paquetes.length > 0)
+            ? data.paquetes
+            : paquetesFallback;
+    } catch (e) {
+        todosPaquetes = paquetesFallback;
+    }
+
+    const esc = (v) => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    const money = (n) => '$' + parseFloat(n || 0).toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+    function renderPaquetes(categoria = 'Todos') {
+        const lista = todosPaquetes.filter(p => categoria === 'Todos' || p.categoria === categoria);
+        if (lista.length === 0) {
+            grid.innerHTML = '<p style="text-align:center; color:#64748b; grid-column:1/-1;">No hay paquetes en esta categoría.</p>';
+            return;
+        }
+
+        grid.innerHTML = lista.map(p => {
+            const img = imagenesPorCategoria[p.categoria] || imagenesPorCategoria['Audio e Iluminación'];
+            const urlRegistro = (sesionActiva ? 'panel.php?paquete=' : 'registro.php?paquete=') + encodeURIComponent(p.nombre);
+            return `
+                <article class="paquete-public-card">
+                    <div class="paquete-public-img">
+                        <img src="${img}" alt="${esc(p.nombre)}">
+                        <span class="paquete-public-tag">${esc(p.categoria)}</span>
+                    </div>
+                    <div class="paquete-public-body">
+                        <h3>${esc(p.nombre)}</h3>
+                        <p class="paquete-public-desc">${esc(p.descripcion)}</p>
+                        <div class="paquete-public-meta">
+                            <span><strong>Servicios incluidos:</strong> ${esc(p.servicios_incluidos)}</span>
+                        </div>
+                        <div class="paquete-public-footer">
+                            <div class="paquete-public-price">
+                                <small>Inversión desde</small>
+                                <strong>${money(p.costo)} MXN</strong>
+                            </div>
+                            <a href="${urlRegistro}" class="btn-paquete-cta">Seleccionar</a>
+                        </div>
+                    </div>
+                </article>
+            `;
+        }).join('');
+    }
+
+    chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+            chips.forEach(c => c.classList.remove('active'));
+            chip.classList.add('active');
+            renderPaquetes(chip.dataset.cat);
+        });
+    });
+
+    renderPaquetes('Todos');
+});
+</script>
+</body>
+</html>
