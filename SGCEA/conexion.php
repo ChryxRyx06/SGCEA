@@ -17,8 +17,9 @@ if (!empty($mysql_url)) {
     $dbname = getenv('DB_NAME') ?: getenv('MYSQLDATABASE') ?: ($_ENV['DB_NAME'] ?? $_SERVER['DB_NAME'] ?? 'sgcea_db');
 }
 
-mysqli_report(MYSQLI_REPORT_OFF);
-$conexion = @new mysqli($host, $user, $pass, $dbname, $port);
+$conexion = mysqli_init();
+$conexion->ssl_set(NULL, NULL, NULL, NULL, NULL);
+$conexion->real_connect($host, $user, $pass, $dbname, $port, NULL, MYSQLI_CLIENT_SSL);
 
 if ($conexion->connect_error) {
     header('Content-Type: application/json; charset=utf-8');
