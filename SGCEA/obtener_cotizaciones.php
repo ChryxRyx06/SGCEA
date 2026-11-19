@@ -12,9 +12,15 @@ $conexion->query("UPDATE cotizaciones SET estado = 'Vencida' WHERE estado = 'Pen
 $rol = $_SESSION['rol'] ?? 'Administrador';
 $id_cliente = intval($_SESSION['id_cliente'] ?? 0);
 
-$sql = "SELECT c.id_cotizacion, c.id_cliente, cl.nombre AS cliente, c.nombre_evento AS evento,
-               c.descripcion_tecnica, c.monto_total, c.vigencia, c.estado,
-               ct.id_contrato,
+$sql = "SELECT c.id_cotizacion,
+               ANY_VALUE(c.id_cliente) AS id_cliente,
+               ANY_VALUE(cl.nombre) AS cliente,
+               ANY_VALUE(c.nombre_evento) AS evento,
+               ANY_VALUE(c.descripcion_tecnica) AS descripcion_tecnica,
+               ANY_VALUE(c.monto_total) AS monto_total,
+               ANY_VALUE(c.vigencia) AS vigencia,
+               ANY_VALUE(c.estado) AS estado,
+               ANY_VALUE(ct.id_contrato) AS id_contrato,
                GROUP_CONCAT(cs.servicio SEPARATOR ', ') AS servicios
         FROM cotizaciones c
         JOIN clientes cl ON c.id_cliente = cl.id_cliente
@@ -28,6 +34,12 @@ if ($rol === 'Cliente') {
 $sql .= " GROUP BY c.id_cotizacion ORDER BY c.id_cotizacion DESC";
 
 $stmt = $conexion->prepare($sql);
+
+if (!$stmt) {
+    http_response_code(500);
+    echo json_encode(["success" => false, "message" => "Error al preparar consulta: " . $conexion->error]);
+    exit;
+}
 if ($rol === 'Cliente') {
     $stmt->bind_param("i", $id_cliente);
 }
