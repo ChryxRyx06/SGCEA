@@ -156,6 +156,7 @@ if (($_SESSION['rol'] ?? '') === 'Cliente' && intval($row['id_cliente']) !== int
         <p><strong>Primera (Anticipo):</strong> Se requiere un anticipo mínimo del 50% para la confirmación formal del evento y bloqueo de fecha.</p>
         <p><strong>Segunda (Disponibilidad):</strong> El equipo y personal técnico están sujetos a validación de disponibilidad previa a la firma.</p>
         <p><strong>Tercera (Cancelación y Descuento):</strong> Si el cliente cancela el evento, la empresa retendrá, como descuento sobre los pagos recibidos, un porcentaje del monto total del contrato según la anticipación con que se solicite la cancelación:</p>
+        <p><strong>Cuarta (Facturaciones):</strong> Las facturaciones solo se haran por metodo SPEI a la siguiente cuenta CLABE 12345678965487164.</p>
         <ul>
             <?php foreach (texto_clausula_cancelacion() as $l): ?><li><?= htmlspecialchars($l) ?>.</li><?php endforeach; ?>
         </ul>
